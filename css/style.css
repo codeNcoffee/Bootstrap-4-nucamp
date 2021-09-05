@@ -27,11 +27,11 @@ body {
 }
 
 .text-black {
-  color: #202020 !important;
+  color: #202020;
 }
 
 .menu .navbar-brand .navbar-caption {
-  line-height: inherit !important;
+  line-height: inherit;
 }
 
 .menu .nav-item:focus,
@@ -57,7 +57,7 @@ body {
 
 .main {
   height: 500px;
-  background-image: url("/assets/img/tinyhouse.png");
+  background-image: url("/images/tinyhouse.png");
   background-color: #daf0ea;
   background-repeat: no-repeat;
   background-position: center;
