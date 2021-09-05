@@ -1,0 +1,42 @@
+{
+    "name": "tinyhouserentals",
+    "version": "1.0.0",
+    "description": "tiny house rental website",
+    "main": "index.js",
+    "dependencies": {
+        "bootstrap": "^4.5.2",
+        "bootstrap-social": "^5.1.1",
+        "create-react-app": "^1.2.1",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1"
+    },
+    "scripts": {
+        "lite": "lite-server",
+        "start": "npm run watch:all",
+        "scss": "node-sass -o css/ css/",
+        "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+        "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+        "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+        "imagemin": "imagemin images/* -o dist/images",
+        "clean": "rimraf dist",
+        "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+        "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/codeNcoffee"
+    },
+    "author": "Justin S",
+    "license": "ISC",
+    "devDependencies": {
+        "copyfiles": "^2.2.0",
+        "imagemin-cli": "^7.0.0",
+        "lite-server": "^2.6.1",
+        "node-sass": "^6.0.1",
+        "onchange": "^7.0.0",
+        "parallelshell": "3.0.1",
+        "rimraf": "^3.0.2",
+        "usemin-cli": "^0.0.7"
+    }
+}
